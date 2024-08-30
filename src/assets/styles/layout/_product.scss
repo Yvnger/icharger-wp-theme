@@ -106,6 +106,10 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 16px;
 
+    @include mobile {
+      grid-template-columns: 1fr;
+    }
+
     &__thumbnail {
       display: block;
       width: 100%;
@@ -146,5 +150,13 @@
       line-height: 1.55;
       color: #2b2b2b;
     }
+  }
+
+  &__link {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
   }
 }
