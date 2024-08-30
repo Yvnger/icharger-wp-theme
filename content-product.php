@@ -26,12 +26,13 @@ if (empty($product) || !$product->is_visible()) {
 
 $product = wc_get_product(get_the_ID());
 $purpose = explode(', ', $product->get_attribute('purpose'));
+$product_url = get_permalink( $product->get_id() );
 ?>
 
 <li id="post-<?php the_ID(); ?>"
-    <?php wc_product_class('products__item product js-product-card', $product); ?>
+    <?php wc_product_class('products__item product', $product); ?>
     data-product-id="<?php the_ID(); ?>"
-    data-modal="product">
+    >
     <div class="product__thumbnail-wrap">
         <?php if ($purpose) : ?>
             <div class="product__labels">
@@ -55,4 +56,5 @@ $purpose = explode(', ', $product->get_attribute('purpose'));
         <p class="product__description"><?= get_the_content(); ?></p>
         <span class="product__price"><?= $product->get_price_html() ?></span>
     </div>
+    <a class="product__link" href="<?= $product_url ?>" aria-label="Перейти на страницу товара"></a>
 </li>
