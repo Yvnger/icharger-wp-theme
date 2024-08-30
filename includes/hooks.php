@@ -13,25 +13,27 @@ function page_heading_wrap_before()
 
 function page_heading_title()
 {
-    echo '<h1 class="page__title">';
+    if (!is_product()) {
+        echo '<h1 class="page__title">';
 
-    if (is_category()) {
-        single_cat_title();
-    } elseif (is_tag()) {
-        single_tag_title();
-    } elseif (is_author()) {
-        the_author();
-    } elseif (is_page()) {
-        the_title();
-    } elseif (is_date()) {
-        echo get_the_date('F Y');
-    } elseif (is_404()) {
-        echo 'Ошибка 404 - Страница не найдена';
-    } else {
-        echo get_the_archive_title();
+        if (is_category()) {
+            single_cat_title();
+        } elseif (is_tag()) {
+            single_tag_title();
+        } elseif (is_author()) {
+            the_author();
+        } elseif (is_page()) {
+            the_title();
+        } elseif (is_date()) {
+            echo get_the_date('F Y');
+        } elseif (is_404()) {
+            echo 'Ошибка 404 - Страница не найдена';
+        } else {
+            echo get_the_archive_title();
+        }
+
+        echo '</h1>';
     }
-
-    echo '</h1>';
 }
 
 function page_heading_breadcrumbs()
