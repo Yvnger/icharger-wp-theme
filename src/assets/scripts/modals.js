@@ -1,4 +1,3 @@
-
 const modalTriggers = document.querySelectorAll('.js-modal-trigger');
 const modals = document.querySelectorAll('.modal');
 const modalActiveClass = 'modal--opened';
