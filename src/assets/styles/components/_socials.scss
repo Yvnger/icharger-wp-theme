@@ -1,0 +1,17 @@
+.socials {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  &__item {
+    font-size: 0;
+  }
+
+  &__link {
+    display: block;
+  }
+
+  &__icon {
+    display: block;
+  }
+}

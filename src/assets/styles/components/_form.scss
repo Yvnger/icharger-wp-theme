@@ -1,0 +1,42 @@
+.form {
+  &__input {
+    display: flex;
+    border: 0;
+    padding: 20px;
+    width: 100%;
+    font-size: 16px;
+    line-height: 1.33;
+    background-color: #ffffff;
+    color: #000000;
+
+    &:focus {
+      outline: 0;
+    }
+
+    &-row {
+      p {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        @include tablet {
+          flex-direction: column;
+        }
+
+        .wpcf7-spinner {
+          display: none;
+        }
+      }
+
+      display: flex;
+      align-items: center;
+      gap: 20px;
+
+      @include tablet {
+        flex-direction: column;
+      }
+    }
+  }
+
+  // &__submit {}
+}

@@ -1,0 +1,21 @@
+.breadcrumbs {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+
+  &__link,
+  span {
+    color: #fff;
+  }
+
+  &__separator {
+    display: flex;
+
+    &::before, &::after {
+      content: '';
+      display: block;
+      flex-shrink: 0;
+      width: 5px;
+    }
+  }
+}

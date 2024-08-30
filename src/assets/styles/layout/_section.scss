@@ -1,0 +1,17 @@
+.section {
+  padding: 45px 0 75px;
+
+  @include mobile {
+    padding: 60px 0;
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 105px;
+    font-weight: 600;
+    font-size: 42px;
+    line-height: 1.23;
+    text-align: center;
+    color: #000;
+  }
+}

@@ -1,0 +1,30 @@
+// Vars
+$container-width: 1200px;
+$container-padding: 15px;
+$container-calculated-width: $container-width + ($container-padding * 2);
+
+// Font vars
+$primary-font: 'TildaSans', sans-serif;
+
+// Breakpoints
+$mobile: 767px;
+$tablet: 990px;
+$laptop: 1200px;
+$desktop: 1280px;
+
+:root {
+  --container-width: #{$container-calculated-width};
+  --container-padding: #{$container-padding};
+  --transition-duration: .15s;
+  --transition-function: ease-in-out;
+
+  --primary: #ff5600;
+  --section-bg-1: #fff;
+  --section-bg-2: #ededed;
+  --footer-bg: #0d0d0d;
+
+  @media (max-width: $mobile) {
+    --container-width: 100%;
+    --container-padding: 15px;
+  }
+}
